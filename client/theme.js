@@ -1,5 +1,6 @@
 //defines the material ui theme 
 //defaults to /core? Shouldn't use /styles maybe?
+//these theme vars will be available to all components b/c app is wrapped in ThemeProvider
 import { createMuiTheme } from "@material-ui/core/styles";
 import { pink } from "@material-ui/core/colors";
 
