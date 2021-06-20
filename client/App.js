@@ -18,4 +18,4 @@ const App = () => {
     )
 }
 //hot(module) enables live reloading
-export default hot(module) (App)
+export default hot(module)(App)

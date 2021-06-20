@@ -22,8 +22,8 @@ const useStyles = makeStyles(theme => ({
     }
 }))
 
-export default function Home() {
-    const classes = userStyles()
+export default function Home(){
+    const classes = useStyles()
     return (
         <Card className={classes.card}>
             <Typography variant="h6" className={classes.title}>
