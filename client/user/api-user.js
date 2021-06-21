@@ -76,6 +76,6 @@ const remove = async(params, credentials) => {
         })
         return await response.json()
     } catch(err) {
-
+        console.log(err)
     }
 }
