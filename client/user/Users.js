@@ -37,7 +37,7 @@ export default function Users() {
     //runs effects after every render including first, but we can tell it to only rerun if something changes in state.
     useEffect(() => {
         const abortController = new AbortController()
-        const signal = new abortController.signal
+        const signal = abortController.signal
         
         list(signal).then((data) => {
             if (data && data.error) {
