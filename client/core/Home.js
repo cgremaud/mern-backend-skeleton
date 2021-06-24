@@ -5,6 +5,7 @@ import { Card, CardMedia } from '@material-ui/core'
 import { CardContent } from '@material-ui/core'
 import { Typography } from '@material-ui/core'
 import crancel from './../assets/images/crancel.jpg'
+import {Link} from 'react-router-dom'
 
 //style declarations
 const useStyles = makeStyles(theme => ({
@@ -38,6 +39,10 @@ export default function Home(){
                     Welcome to Hell, bitches!
                 </Typography>
             </CardContent>
+            <CardContent>
+                test test <Link to="/users">Users</Link>
+            </CardContent>
         </Card>
+        
     )
 }
