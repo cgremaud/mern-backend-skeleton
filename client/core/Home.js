@@ -40,7 +40,7 @@ export default function Home(){
                 </Typography>
             </CardContent>
             <CardContent>
-                test test <Link to="/users">Users</Link>
+                <Link to="/users">Users</Link>
             </CardContent>
         </Card>
         
