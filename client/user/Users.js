@@ -38,7 +38,7 @@ export default function Users() {
     useEffect(() => {
         const abortController = new AbortController()
         const signal = abortController.signal
-        
+        //calls the list function from api-users and calls setUsers on the response
         list(signal).then((data) => {
             if (data && data.error) {
                 console.log(data.error)
@@ -47,11 +47,11 @@ export default function Users() {
             }
         })
         //aborts the fetch call when the component unmounts
-        //passing an empty array as the 2nd arg so that cleanup only runs on mount and unmount not after every render
         return function cleanup() {
             abortController.abort()
         }
-    }, [])
+    }, []) //passing an empty array as the 2nd arg so that cleanup only runs on mount and unmount not after every render
+    
     //actual view content here
     return (
         <Paper className = {classes.root} elevation = {4}>
