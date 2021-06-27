@@ -3,7 +3,7 @@
 //safe to assume the react comp that calls this will bundle the email/pwd into an obj somehow
 const signin = async (user) => {
     try {
-        let response = await fetch('/auth/signing/', {
+        let response = await fetch('/auth/signin/', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
