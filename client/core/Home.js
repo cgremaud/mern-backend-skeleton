@@ -16,7 +16,8 @@ const useStyles = makeStyles(theme => ({
     },
     title: {
         padding:`${theme.spacing(3)}px ${theme.spacing(2.5)}px ${theme.spacing(2)}px`,
-        color: theme.palette.openTitle
+        color: theme.palette.openTitle,
+        textAlign: 'center'
     },
     media: {
         minHeight: 400
@@ -30,18 +31,23 @@ export default function Home(){
             <Typography variant="h6" className={classes.title}>
                 Home Page
             </Typography>
+            <CardContent>
+                <Typography variant = "h6">
+                <Link to="/users">Users - </Link>
+                <Link to="/signup">Sign up - </Link>
+                <Link to="/signin">Sign in</Link>
+                </Typography>
+            </CardContent>
             <CardMedia 
                 className={classes.media} 
                 image={crancel} 
                 title="Crancel culture"/>
             <CardContent>
                 <Typography variant="body2" component="p">
-                    Welcome to Hell, bitches!
+                    Placeholder text for home page element
                 </Typography>
             </CardContent>
-            <CardContent>
-                <Link to="/users">Users</Link>
-            </CardContent>
+            
         </Card>
         
     )

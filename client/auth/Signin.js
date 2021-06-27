@@ -51,7 +51,7 @@ export default function Signin(props) {
             email: values.email || undefined,
             password: values.password || undefined
         }
-        //calls the signing api-call, then passes the returned jwt to authenticate which then calls setValues to set redirect = true
+        //calls the signin api-call, then passes the returned jwt to authenticate which then calls setValues to set redirect = true
         signin(user).then((data) => {
             if (data.error) {
                 //so what the ... is saying is "pass in all the other values as they already are, but update error"
