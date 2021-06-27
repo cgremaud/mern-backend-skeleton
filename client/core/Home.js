@@ -12,12 +12,16 @@ const useStyles = makeStyles(theme => ({
     card: {
         maxWidth: 600,
         margin: 'auto',
-        marginTop: theme.spacing(5)
+        marginTop: theme.spacing(3),
+        color: 'black'
     },
     title: {
         padding:`${theme.spacing(3)}px ${theme.spacing(2.5)}px ${theme.spacing(2)}px`,
         color: theme.palette.openTitle,
         textAlign: 'center'
+    },
+    nav: {
+        padding:`${theme.spacing(3)}px ${theme.spacing(2.5)}px ${theme.spacing(2)}px`,
     },
     media: {
         minHeight: 400
@@ -32,10 +36,10 @@ export default function Home(){
                 Home Page
             </Typography>
             <CardContent>
-                <Typography variant = "h6">
-                <Link to="/users">Users - </Link>
-                <Link to="/signup">Sign up - </Link>
-                <Link to="/signin">Sign in</Link>
+                <Typography variant = "h6" className={classes.nav}>
+                    <Link to="/users">Users - </Link>
+                    <Link to="/signup">Sign up - </Link>
+                    <Link to="/signin">Sign in</Link>
                 </Typography>
             </CardContent>
             <CardMedia 

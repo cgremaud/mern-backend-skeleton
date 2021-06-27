@@ -27,13 +27,9 @@ const useStyles = makeStyles(theme => ({
 
 export default function Users() {
     const classes = useStyles()
-    //this declares a state variable nambed users which has the setter setUsers
-    //normally need to use class component to use state, this allows us to use it in a function component
-    //the arg passed to useState sets the init val, so this declares it as empty array
     const [users, setUsers] = useState([])
 
     //useEffect serves purpose of lifecycle methods in classes
-    //allows us to fetch data
     //runs effects after every render including first, but we can tell it to only rerun if something changes in state.
     useEffect(() => {
         const abortController = new AbortController()
@@ -67,7 +63,7 @@ export default function Users() {
                                     <Person />
                                 </Avatar>
                             </ListItemAvatar>
-                            <ListItemText primary={item.name} secondary = "What's up?"/>
+                            <ListItemText primary={item.name} secondary = {"User Id: " + item._id}/>
                             <ListItemSecondaryAction>
                                 <IconButton>
                                     <ArrowForward/>
