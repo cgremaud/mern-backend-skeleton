@@ -1,7 +1,6 @@
 import { signout } from './api-auth.js'
 
 
-//i'm guessing i'll import these into the components that call the api-auth functions and will call this to store result
 const auth = {
     //saves JWT credentials received from server on successful sign in
     authenticate(jwt, cb) {
@@ -31,7 +30,7 @@ const auth = {
             sessionStorage.removeItem('jwt')
             cb()
             signout().then((data) => {
-                document.cookie = "t=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;" //I guess this guarantees that it expires right away.  
+                document.cookie = "t=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;" //guarantees that it expires right away.  
             })
         }
     }
