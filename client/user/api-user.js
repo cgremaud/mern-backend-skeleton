@@ -32,7 +32,7 @@ const list = async (signal) => {
 //not sure what this signal param is doing. Shows up in a few places
 const read = async (params, credentials, signal) => {
     try {
-        let response = await fetch('/api/users' + params.userId, {
+        let response = await fetch('/api/users/' + params.userId, {
             method: 'GET',
             signal: signal,
             headers: {
