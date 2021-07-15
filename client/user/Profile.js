@@ -72,7 +72,6 @@ export default function Profile({ match }) {
               </Avatar>
             </ListItemAvatar>
             <ListItemText primary={user.name} secondary={user.email}/>
-              */}
           </ListItem>
           <Divider/>
           <ListItem>
