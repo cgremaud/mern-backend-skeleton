@@ -17,9 +17,7 @@ const create = async (req, res) => {
   }
 }
 
-/**
- * Load user and append to req.
- */
+//load user and append to request
 const userByID = async (req, res, next, id) => {
   try {
     let user = await User.findById(id)
